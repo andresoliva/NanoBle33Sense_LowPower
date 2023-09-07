@@ -22,9 +22,7 @@ In order to achieve power consumption with  Arduino Nano board and these codes, 
 To use the Lora module, you need to download and install [Lora-E5 library](https://github.com/andresoliva/LoRa-E5) and have a [Seed Grove-Wio-E5 LoRa module](https://github.com/andresoliva/Grove-Wio-E5) plugged to your board.
 
 
-## Flowchart
-
-Below is a flowchart illustrating the high-level logic and components of the Arduino code:
+## Edge AI and Lora code Flowchart
 
 ```mermaid
 graph TD;
