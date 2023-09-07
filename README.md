@@ -51,13 +51,14 @@ flowchart TD
     Start --> Initialization
     Initialization --> Setup
     Setup --> Data_Acquisition
-    Data_Acquisition --> Inference
-    Inference --> RunInferenceBackground
-    RunInferenceBackground --> Classification
+    Data_Acquisition --> PassDatatoInference
+    PassDatatoInference --> WaitUntilNextAcquisition
+    PassDatatoInference --> RunInferenceBackground
+    WaitUntilNextAcquisition --> Data_Acquisition
+    RunInferenceBackground -->Classification
     Classification --> Transmission
-    Transmission --> Data_Acquisition
-    Data_Acquisition --> End
-    End --> Stop
+    Transmission --> WaitUntilNextClassification
+    WaitUntilNextClassification --> Classification
 ```
 This flowchart provides an overview of how the code operates, from initialization to continuous loop execution, inference, classification, and potential data transmission.
 
