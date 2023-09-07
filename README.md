@@ -14,7 +14,9 @@ Is important to notice that the values obtained are for the USB serial port disa
  * Delay:   0.62 mA
  * 1.16 mA when 
  * 1.19 mA  when using all the functionalities
+
 Is important to notice that:
+
 * 300 uA corresponds to the power consumed in order to run the inference model each second with a 62 ms inference time.
 * 200 uA corresponds to have the accelerometer turned ON at  a 62.5 Hz in normal mode (this value can get decreased.
 * 300 uA due to the fact that the wire library does not support an .end command. This means that you cannot turn off the circuitery associated with the I2C while you are not using it so there for 
