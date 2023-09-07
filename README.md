@@ -47,18 +47,21 @@ Follow these steps to set up and use the Arduino code in this repository:
 Below is a flowchart illustrating the high-level logic and components of the Arduino code:
 
 ```mermaid
-flowchart TD
+graph TD;
     Start --> Initialization
     Initialization --> Setup
     Setup --> Data_Acquisition
-    Data_Acquisition --> PassDatatoInference
-    PassDatatoInference --> WaitUntilNextAcquisition
-    PassDatatoInference --> RunInferenceBackground
+  subgraph Main Loop
+    Data_Acquisition --> PassDatatoInferenceEngine
+    PassDatatoInferenceEngine --> WaitUntilNextAcquisition
     WaitUntilNextAcquisition --> Data_Acquisition
-    RunInferenceBackground -->Classification
+    end
+  PassDatatoInferenceEngine --> Classification
+  subgraph Second Thread
     Classification --> Transmission
     Transmission --> WaitUntilNextClassification
     WaitUntilNextClassification --> Classification
+  end
 ```
 This flowchart provides an overview of how the code operates, from initialization to continuous loop execution, inference, classification, and potential data transmission.
 
