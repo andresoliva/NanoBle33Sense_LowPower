@@ -47,5 +47,5 @@ This flowchart provides an overview of how the code operates, from initializatio
 
 ## License
 
-This code is distributed under the [License Name] license. You can find the full terms and conditions in the LICENSE file provided in this repository.
+This code is distributed under the MIT License. You can find the full terms and conditions in the LICENSE file provided in this repository.
 
