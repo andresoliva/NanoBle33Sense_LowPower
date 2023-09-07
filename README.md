@@ -12,18 +12,20 @@ here
 Is important to notice that the values obtained are for the USB serial port disabled (for also the LoRa library )
 
  * Delay:   0.62 mA
- * 1.16 mA when 
- * 1.19 mA  when using all the functionalities
+ * 1.16 mA when all the functions of the code are on (with only the accelerometer turned on and acquiring data)
+ * 1.19 mA  when using all the functionalities\
 
-Is important to notice that:
+Also, the 1.19 mA of power consumption can be decomposed into the following :
 
-* 300 uA corresponds to the power consumed in order to run the inference model each second with a 62 ms inference time.
-* 200 uA corresponds to have the accelerometer turned ON at  a 62.5 Hz in normal mode (this value can get decreased.
-* 300 uA due to the fact that the wire library does not support an .end command. This means that you cannot turn off the circuitery associated with the I2C while you are not using it so there for 
+* 320 uA corresponds to the bare power consumption of the microcontroller when is sleeping and doing nothing. 
+* 240 uA corresponds to having the accelerometer turned ON at  62.5 Hz in normal mode (by changing the value the power consumption value can be decreased) and reading the values.
+* 320 uA due to the fact that the wire library does not support tjhe .end command. This means that you cannot turn off the circuitry associated with the I2C while you are not using it, therefore, implying a constant power consumption similar to the one you have when the Serial port has been init but is not used.
+* 310 uA corresponds to the Edge impulse Tiny Ml inference model each second with a 62 ms inference time. 
+* 31 uA corresponds to the LoRa module transmitting one message every 10 minutes with Spread Factor 7.
 
 ## Code Features
 
-1. **Low-Power Mode**: The code examples incorporates low-power optimizations to minimize energy consumption when running on an Arduino device. Low-power mode is especially useful for battery-powered applications to extend battery life.
+1. **Low-Power Mode**: The code examples incorporate low-power optimizations to minimize energy consumption when running on an Arduino device. Low-power mode is especially useful for battery-powered applications to extend battery life.
 
 2. **LoRa Transmission**: It enables the transmission of classification results using LoRa technology. LoRa (Long Range) communication is ideal for long-distance wireless data transfer, making it suitable for remote monitoring and IoT applications.
 
