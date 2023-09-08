@@ -20,6 +20,10 @@ In order to be able to feed your board with an external 3.3V supply, you need to
 
 <img src="./pictures/board_cut.png" width=50% align="center"> 
 
+## Edge Impulse Tiny ML
+
+In order to run the TinyMl example, you need to install the Edge Impulse generated library (ei-ble_test_accelerometer-arduino62.5hz.zip) as detailed. This library holds a TinyML model that will use the accelerometer data in order to try to figure out if your device is not moving or detect (with terrible accuracy) the direction of the board movement (right, left, upwards, downwards). The aim of this example is just to show you how to integrate low-power modes, Edge-AI and LoRa, not to perform good detection. If you are able to run these examples and understand the code, I encourage you to train your own models!!.
+
 ## Lora Module
 To use the Lora module, you need to download and install [Lora-E5 library](https://github.com/andresoliva/LoRa-E5) and have a [Seed Grove-Wio-E5 LoRa module](https://github.com/andresoliva/Grove-Wio-E5) plugged to your board.
 
