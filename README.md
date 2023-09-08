@@ -12,7 +12,7 @@ The code includes features such as Low-Power mode for optimizing power consumpti
 
 ## Hardware Modifications
 
-In order to achieve power consumption with  Arduino Nano board and these codes, you need to provide an external 3.3V power supply. In order to be able to feed your board with an external 3.3V supply, you need to cut following copper trace indicated in the picture and plug your external power pins (3.3V and 0V/ground) to the indicated pins:
+In order to achieve power consumption with  Arduino Nano board and these codes, you need to provide an external 3.3V power supply. In order to be able to feed your board with an external 3.3V supply, you need to cut the following copper trace indicated in the picture and plug your external power pins (3.3V and 0V/ground) to the indicated pins:
 
 <img src="./pictures/board_cut.png" width=50% align="center"> 
 
@@ -39,7 +39,7 @@ Also, the 1.19 mA of power consumption can be decomposed into the following :
 
 * 320 uA corresponds to the bare power consumption of the microcontroller when is sleeping and doing nothing. 
 * 240 uA corresponds to having the accelerometer turned ON at  62.5 Hz in normal mode (by changing the value the power consumption value can be decreased) and reading the values.
-* 320 uA due to the fact that the wire library does not support tjhe .end command. This means that you cannot turn off the circuitry associated with the I2C while you are not using it, therefore, implying a constant power consumption similar to the one you have when the Serial port has been init but is not used.
+* 320 uA due to the fact that the wire library does not support the ".end" command. This means that you cannot turn off the circuitry associated with the I2C while you are not using it, therefore, implying a constant power consumption similar to the one you have when the Serial port has been init but is not used.
 * 310 uA corresponds to the Edge impulse Tiny Ml inference model each second with a 62 ms inference time. 
 * 31 uA corresponds to the LoRa module transmitting one message every 10 minutes with Spread Factor 7.
 
