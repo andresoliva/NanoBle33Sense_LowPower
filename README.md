@@ -4,13 +4,13 @@ The code includes features such as Low-Power mode for optimizing power consumpti
 
 ## Power consumption values obtained
 
-Here you can find 
+Here you can find the power consumption values measured for the two projects when the 
 
-### For the low power example
+### For the low-power example
  * Shutdown: 5.2 uA
  * Delay:    320 uA
 
-### For the low power example while using the Edge Ai, Lora module and accelerometer sample acquisition
+### For the low power example while using the Edge Ai, Lora module and accelerometer samples acquisition
 
 Is important to notice that the values obtained are for the USB serial port disabled (for also the LoRa library )
 
