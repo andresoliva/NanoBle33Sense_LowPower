@@ -12,7 +12,11 @@ The code includes features such as Low-Power mode for optimizing power consumpti
 
 ## Hardware Modifications
 
-In order to achieve power consumption with  Arduino Nano board and these codes, you need to provide an external 3.3V power supply. In order to be able to feed your board with an external 3.3V supply, you need to cut the following copper trace indicated in the picture and plug your external power pins (3.3V and 0V/ground) to the indicated pins:
+In order to achieve the power consumption values listed in the following sections with Arduino Nano board and these codes, you need to provide an external 3.3V power supply. 
+#### What happens if I feed the board using a 5V source as default (for example, with a USB power bank)? 
+You will add a 9 mA power consumption value, which is 9 TIMES greater than the power consumption of this code.
+#### Modifications
+In order to be able to feed your board with an external 3.3V supply, you need to cut the following copper trace indicated in the picture and plug your external power pins (3.3V and 0V/ground) into the indicated pins:
 
 <img src="./pictures/board_cut.png" width=50% align="center"> 
 
