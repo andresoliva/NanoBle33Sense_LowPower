@@ -19,7 +19,14 @@ You will add a 9 mA power consumption value, which is 9 TIMES greater than the p
 In order to be able to feed your board with an external 3.3V supply, you need to cut the following copper trace indicated in the picture and plug your external power pins (3.3V and 0V/ground) into the indicated pins:
 
 <img src="./pictures/board_cut.png" width=50% align="center"> 
-##### Warning: Once you cut these pins, you will need to add an external cable in order to program your board again. To avoid this issue, my advice is to add a cut Arduino cable in the pins, allowing you to choose or 
+
+#### Warning: Once you cut these pins, you will need to add an external cable in order to program your board again. To avoid this issue, my advice is to add a cut Arduino cable in the pins, allowing you to connect or disconnect the trace you cut before and program the board without an external source.
+
+Cable plugged: Arduino Nano uses a 5V source.
+
+Cable Unplugged: Arduino Nano will need a 3.3V external source.
+
+<img src="./pictures/board_cut_cables.png" width=100% align="center"> 
 
 ## Edge Impulse Tiny ML
 
