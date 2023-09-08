@@ -1,12 +1,15 @@
 # NanoBle33Sense_LowPower
-A code is provided to use the Arduino nano Nano Ble 33 Sense board into the lowest power mode possible. Also, there is an addional example is provided in order to use this example with a LoRa communication module and Edge Impulse TinyML neuronal network for embedded devices.
+A code is provided to use the Arduino Nano Ble 33 Sense board in the lowest power mode possible. Also, there is an addional example is provided in order to use this example with a LoRa communication module and Edge Impulse TinyML neuronal network for embedded devices.
 The code includes features such as Low-Power mode for optimizing power consumption and LoRa transmission for sending classification results wirelessly. This README provides comprehensive information about the code, its purpose, hardware requirements, usage instructions, and licensing.
 
 ## Power consumption values obtained
-here
+
+Here you can find 
+
 ### For the low power example
  * Shutdown: 5.2 uA
  * Delay:    320 uA
+
 ### For the low power example while using the Edge Ai, Lora module and accelerometer sample acquisition
 
 Is important to notice that the values obtained are for the USB serial port disabled (for also the LoRa library )
