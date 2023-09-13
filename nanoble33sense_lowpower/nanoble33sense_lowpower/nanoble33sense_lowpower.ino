@@ -9,8 +9,7 @@
 //Note: If you add the shutdown function, you get 5.2uA as power consumption . This means 
 //that there is an issue with the low power mode of the module (the delay function), and not with the hardware or sensrs
 
-#include <Scheduler.h>
-
+#include <ArduinoBLE.h>
 int main(void){
 init();
 initVariant();
@@ -36,8 +35,8 @@ void setup(){
 //Pins are currently swapped. Lower current achieved if setting both pins to HIGH
   digitalWrite(PIN_ENABLE_SENSORS_3V3, HIGH); //PIN_ENABLE_I2C_PULLUP - @pert contribution
   digitalWrite(PIN_ENABLE_I2C_PULLUP,  HIGH); //PIN_ENABLE_SENSORS_3V3 - @pert contribution
-  //NRF_POWER->DCDCEN=1;//ENABLE BUCK CONVERTER, HELPS A LOT
-   Scheduler.startLoop(loop);
+  //NRF_POWER->DCDCEN=1;//to ENABLE BUCK CONVERTER. Not tested during run time, but does not help to change power consumption during standby mode
+  
 
 
 
